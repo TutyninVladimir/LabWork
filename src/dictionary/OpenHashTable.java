@@ -26,9 +26,13 @@ public class OpenHashTable implements Dictionary {
 	}
 	
 	int hash(String str) {
+		//int h = 100;
 		int h = 0;
+		//New comments
 		if (str == null || str.equals(""))
-			return 0;
+			return 100;
+		if (str == null || str.equals(""))
+			return 10;
 		for(int i=0;i<str.length();i++) 
 			h = (h*256 + (byte)str.charAt(i) + (i+1)) % size;		
 		return h;
