@@ -30,7 +30,7 @@ public class OpenHashTable implements Dictionary {
 		if (str == null || str.equals(""))
 			return 0;
 		for(int i=0;i<str.length();i++) 
-			h = (h*256 + (byte)str.charAt(i)) % size;		
+			h = (h*256 + (byte)str.charAt(i) + (i+1)) % size;		
 		return h;
 	}
 	
